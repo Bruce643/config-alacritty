@@ -63,14 +63,14 @@ scrolling:
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  multiplier: 3
+  multiplier: 1
 
 # Font configuration (changes require restart)
 font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: Iosevka
+    family:ComicSannsMono Nerd Font
     style: Light
     # family: "Fira Code"
     # family: "Source Code Pro"
@@ -93,7 +93,7 @@ font:
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 14.0
+  size: 16.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -120,26 +120,26 @@ font:
   # following command:
   #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
   #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
+  This is a global setting and will require a log out or restart to take
+   effect.
   use_thin_strokes: true
 
-# When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: false
+When true, bold text is drawn using the bright variant of colors.
+draw_bold_text_with_bright_colors: true
 
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: true
+ Use custom cursor colors. If true, display the cursor in the cursor.foreground
+ and cursor.background colors, otherwise invert the colors of the cursor.
+custom_cursor_colors: fulse
 
-# Colors
+Colors
 colors:
 
-  # Tomorrow (https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-tomorrow.yml)
-  # Default colors
+  Tomorrow (https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-tomorrow.yml)
+  Default colors
   primary:
     background: '0xffffff'
     foreground: '0x4d4d4c'
-  # Colors the cursor will use if `custom_cursor_colors` is true
+  Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0xffffff'
     cursor: '0x4d4d4c'
@@ -153,7 +153,7 @@ colors:
     magenta: '0x8959a8'
     cyan:    '0x3e999f'
     white:   '0x4d4d4c'
-  # Bright colors
+  Bright colors
   bright:
     black:   '0x8e908c'
     red:     '0xf5871f'
@@ -196,8 +196,8 @@ colors:
 
   # Indexed Colors
   #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
+  The indexed colors include all colors from 16 to 256.
+  When these are not set, they're filled with sensible defaults.
   #
   # Example:
   #   `- { index: 16, color: '0xff00ff' }`
@@ -427,7 +427,7 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 # Mouse bindings
 #
@@ -463,7 +463,7 @@ cursor:
 # dynamic_title: false
 
 # Live config reload (changes require restart)
-live_config_reload: true
+live_config_reload: false
 
 debug:
   # Should display the render timer
