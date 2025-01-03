@@ -27,8 +27,8 @@ window:
   # Blank space added around the window in pixels. This padding is not scaled by
   # DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x:5
+    y: 5
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -45,7 +45,7 @@ window:
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:
-  #   - Windowed
+     - Windowed
   #   - Maximized
   #   - Fullscreen
   #
@@ -53,28 +53,27 @@ window:
   #   - SimpleFullscreen
   startup_mode: Windowed
 
-  # Background opacity
-  opacity: 1.0
+  Background opacity .02
 
 scrolling:
   # maximum number of lines in the scrollback buffer. Specifying '0' will
   # disable scrolling.
-  history: 0
+  history: 1
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  multiplier: 3
+  multiplier:1
 
 # Font configuration (changes require restart)
-font:
+font:true
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: Iosevka
-    style: Light
+    family: ComicSannsMono Nerd Font
+    style: color
     # family: "Fira Code"
-    # family: "Source Code Pro"
-    # style: Retina
+     family: "ComicSannsMono nerd font"
+     style:color
 
   # The bold font face
   bold:
@@ -93,7 +92,7 @@ font:
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 14.0
+  size: 17.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -125,7 +124,7 @@ font:
   use_thin_strokes: true
 
 # When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
@@ -139,7 +138,7 @@ colors:
   primary:
     background: '0xffffff'
     foreground: '0x4d4d4c'
-  # Colors the cursor will use if `custom_cursor_colors` is true
+   Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0xffffff'
     cursor: '0x4d4d4c'
@@ -153,8 +152,8 @@ colors:
     magenta: '0x8959a8'
     cyan:    '0x3e999f'
     white:   '0x4d4d4c'
-  # Bright colors
-  bright:
+   Bright colors
+  bright:true
     black:   '0x8e908c'
     red:     '0xf5871f'
     green:   '0xe0e0e0'
@@ -196,7 +195,7 @@ colors:
 
   # Indexed Colors
   #
-  # The indexed colors include all colors from 16 to 256.
+  The indexed colors include all colors from 16 to 256.
   # When these are not set, they're filled with sensible defaults.
   #
   # Example:
@@ -427,7 +426,7 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 # Mouse bindings
 #
@@ -494,7 +493,7 @@ debug:
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 shell:
-  program: /usr/local/bin/fish
+  program: /usr/local/bin/bash
   args:
     - --command=tmux
 
