@@ -25,10 +25,10 @@ window:
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is not scaled by
-  # DPI and the specified value is always added at both opposing sides.
+   DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 10
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -36,7 +36,7 @@ window:
   # Window decorations
   #
   # Available values:
-  # - full: borders and title bar
+  - full: borders and title bar
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
@@ -45,7 +45,7 @@ window:
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:
-  #   - Windowed
+    - Windowed
   #   - Maximized
   #   - Fullscreen
   #
@@ -54,7 +54,7 @@ window:
   startup_mode: Windowed
 
   # Background opacity
-  opacity: 1.0
+  opacity: .02
 
 scrolling:
   # maximum number of lines in the scrollback buffer. Specifying '0' will
@@ -70,9 +70,9 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: Iosevka
+    family: ComicSannsMono Nerd Font
     style: Light
-    # family: "Fira Code"
+     family: "Fira Code"
     # family: "Source Code Pro"
     # style: Retina
 
@@ -132,14 +132,14 @@ draw_bold_text_with_bright_colors: false
 custom_cursor_colors: true
 
 # Colors
-colors:
+colors:bright
 
   # Tomorrow (https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-tomorrow.yml)
   # Default colors
   primary:
     background: '0xffffff'
     foreground: '0x4d4d4c'
-  # Colors the cursor will use if `custom_cursor_colors` is true
+  Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0xffffff'
     cursor: '0x4d4d4c'
@@ -153,7 +153,7 @@ colors:
     magenta: '0x8959a8'
     cyan:    '0x3e999f'
     white:   '0x4d4d4c'
-  # Bright colors
+   Bright colors
   bright:
     black:   '0x8e908c'
     red:     '0xf5871f'
@@ -427,7 +427,7 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 # Mouse bindings
 #
@@ -451,7 +451,7 @@ cursor:
   # Cursor style
   #
   # Values for 'style':
-  #   - ▇ Block
+    - ▇ Block
   #   - _ Underline
   #   - | Beam
   style: Block
@@ -494,7 +494,7 @@ debug:
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 shell:
-  program: /usr/local/bin/fish
+  program: /usr/local/bin/bash
   args:
     - --command=tmux
 
